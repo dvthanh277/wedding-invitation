@@ -1,4 +1,4 @@
-// window.onload = async function () {
+// window.onload = function () {
 //   const album = "1pb9W9H6WXRuXX2YcrXGR8JarNEeCAkT4";
 //   const CLIENT_ID =
 //     "105438724692-copdd31l459r34o95rqkv39vq8fpm2kc.apps.googleusercontent.com";
@@ -7,7 +7,6 @@
 //     "https://www.googleapis.com/discovery/v1/apis/drive/v3/rest",
 //   ];
 //   const SCOPES = "https://www.googleapis.com/auth/drive.readonly";
-
 //   function initClient() {
 //     gapi.client.init({
 //       apiKey: API_KEY,
@@ -16,11 +15,9 @@
 //       scope: SCOPES,
 //     });
 //   }
-
 //   function handleClientLoad() {
 //     gapi.load("client:auth2", initClient);
 //   }
-
 //   function handleSubmit() {
 //     if (album) {
 //       loadPhotosFromFolder(album);
@@ -28,7 +25,6 @@
 //     }
 //   }
 //   console.log("aaa");
-
 //   function loadPhotosFromFolder(album) {
 //     console.log("aaa");
 //     // Function to fetch files and handle pagination
@@ -43,7 +39,6 @@
 //         .then((response) => {
 //           const files = response.result.files;
 //           console.log(files);
-
 //           // If files are found, process them
 //           if (files && files.length > 0) {
 //             console.log(files);
@@ -52,18 +47,21 @@
 //         })
 //         .catch((error) => {});
 //     };
-
 //     // Start fetching files without a page token
 //     fetchFiles();
 //   }
-
 //   handleClientLoad();
 //   setTimeout(() => {
 //     handleSubmit();
 //   }, 1000);
 // };
+
 $(document).ready(function () {
-  setTimeout(() => {
-    $("#music iframe").click();
-  }, 0);
+  console.log("a");
+  const audio = document.getElementById("backgroundAudio");
+
+  $(window).on("scroll", function () {
+    console.log(audio.muted);
+    audio.muted ? (audio.muted = false) : null;
+  });
 });

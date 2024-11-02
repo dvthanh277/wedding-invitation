@@ -35,13 +35,13 @@
         </div>
       </div>
     </section>
+    <section class="section1"></section>
+
+    <!-- Background Music -->
     <div id="player">
-      <audio
-        id="backgroundAudio"
-        src="./images/music.mp3"
-        loop
-        autoplay
-      ></audio>
+      <audio controls loop id="backgroundAudio" muted autoplay>
+        <source src="./assets/music.mp3" type="audio/mpeg" />
+      </audio>
     </div>
 
     <script src="https://apis.google.com/js/api.js"></script>
@@ -52,7 +52,6 @@
         duration: 800,
       });
     </script>
-
     <script src="./js/main.js"></script>
   </body>
 </html>
