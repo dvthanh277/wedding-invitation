@@ -2,26 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>THIỆP MỜI CƯỚI THÀNH & OANH</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
     <link href="./css/reset.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/layout.css" />
   </head>
+
   <body>
-    <section id="section1">
-      <div><img src="./images/save_the_date_1.png" alt="" /></div>
+    <section class="section1">
+      <div>
+        <div class="title" data-aos="fade-up">
+          <img src="./images/save_the_date_1.png" alt="" />
+        </div>
+        <div class="mask1" data-aos="fade-up" data-delay="300">
+          <img src="./images/image1.jpg" alt="" />
+        </div>
+        <div class="name-wrapper">
+          <div class="name" data-aos="fade-right" data-aos-delay="200">
+            <p>Văn Thành - Ngọc Oanh</p>
+          </div>
+          <div class="date" data-aos="fade-up" data-aos-delay="400">
+            <p>10-11</p>
+            <p>2024</p>
+          </div>
+        </div>
+      </div>
     </section>
-    <script
-      src="https://code.jquery.com/jquery-3.7.1.min.js"
-      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
-      crossorigin="anonymous"
-    ></script>
+    <div id="player">
+      <audio
+        id="backgroundAudio"
+        src="./images/music.mp3"
+        loop
+        autoplay
+      ></audio>
+    </div>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="./js/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init({
-        easing: "ease-out-back",
-        duration: 1000,
+        duration: 800,
       });
     </script>
+
+    <script src="./js/main.js"></script>
   </body>
 </html>

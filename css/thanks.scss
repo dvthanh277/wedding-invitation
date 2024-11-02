@@ -1,0 +1,162 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*,
+body,
+html {
+  font-family: "Lexend", sans-serif;
+}
+
+.wrapper {
+  width: 1140px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.section_title {
+  text-align: center;
+  position: relative;
+
+  &_bg {
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: bold;
+    opacity: 0.05;
+    user-select: none;
+  }
+
+  &_main {
+    font-weight: bold;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100px;
+      height: 4px;
+      background-color: orange;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &.light {
+    .section_title {
+      &_bg {
+        color: #fff;
+      }
+
+      &_main {
+        color: #fff;
+      }
+    }
+  }
+}
+
+section {
+  padding: 100px 0;
+  user-select: none;
+}
+
+#home {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  user-select: none;
+
+  .wrapper {
+    display: flex;
+
+    .home {
+      &_text {
+        width: 600px;
+      }
+
+      &_title {
+        font-size: 60px;
+        font-weight: bold;
+
+        .title_style {
+          font-size: 60px;
+          display: block;
+          color: orange;
+        }
+      }
+
+      &_subtitle {
+        font-size: 40px;
+        font-weight: 400;
+      }
+
+      &_thanks {
+        font-size: 20px;
+        margin-top: 20px;
+        opacity: 0.6;
+      }
+
+      &_link {
+        display: block;
+        margin-top: 48px;
+        color: orange;
+        text-decoration: none;
+        transition: all 0.3s;
+        width: fit-content;
+
+        i {
+          margin-left: 5px;
+          transition: all 0.3s;
+        }
+
+        &:hover {
+          i {
+            transition: all 0.3s;
+          }
+
+          color: rgb(188, 135, 35);
+          margin-left: 5px;
+          transition: all 0.3s;
+        }
+      }
+
+      &_image {
+        width: 460px;
+      }
+    }
+  }
+
+  .home_mouse_icon {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    a {
+      display: block;
+      color: #000;
+      transition: all 0.3s;
+      position: relative;
+      width: 28px;
+      height: 32px;
+
+      &:hover {
+        color: orange;
+        transition: all 0.3s;
+      }
+
+      i {
+        font-size: 32px;
+        animation: arrow 1.2s ease-in-out infinite;
+        position: absolute;
+      }
+    }
+  }
+}

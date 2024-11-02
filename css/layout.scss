@@ -1,0 +1,58 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap");
+*,
+body,
+html {
+  font-family: "Lexend", sans-serif;
+  color: #000;
+  background-color: #f6f2e4;
+}
+.section1 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .title {
+    margin: 0 40px;
+    img {
+      margin-top: 20px;
+    }
+  }
+
+  .mask1 {
+    -webkit-mask-image: url(../images/mask.png);
+    mask-image: url(../images/mask.png);
+    mask-size: 100%;
+    mask-repeat: no-repeat;
+    width: 90%;
+    margin: 0 auto 0;
+    img {
+      width: 100%;
+      object-fit: cover;
+      object-position: 0 -60px;
+    }
+  }
+  .name-wrapper {
+    margin-top: -50px;
+  }
+  .name {
+    font-size: 32px;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+  }
+  .date {
+    font-size: 32px;
+    font-family: "Libre Bodoni", serif;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+#player {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+}
