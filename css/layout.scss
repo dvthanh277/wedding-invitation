@@ -1,6 +1,5 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&display=swap");
 *,
 body,
@@ -49,6 +48,33 @@ section {
     .date {
       width: 32%;
     }
+  }
+}
+.section2 {
+  .container {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  h1 {
+    font-weight: normal;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 16px;
+    list-style-type: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-family: "Lexend", serif;
+  }
+
+  li span {
+    display: block;
+    font-size: 24px;
   }
 }
 #player {
