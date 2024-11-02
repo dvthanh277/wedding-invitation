@@ -7,47 +7,47 @@ body,
 html {
   font-family: "Lexend", sans-serif;
   color: #000;
-  background-color: #f6f2e4;
 }
-.section1 {
-  height: 100vh;
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+}
+section {
+  max-width: 640px;
+}
+.section1 {
+  display: flex;
+  flex-direction: column;
+  // background-color: #f6f2e4;
+  padding: 2% 0 8%;
   .title {
-    margin: 0 40px;
+    margin: 0 10%;
     img {
-      margin-top: 20px;
-    }
-  }
-
-  .mask1 {
-    -webkit-mask-image: url(../images/mask.png);
-    mask-image: url(../images/mask.png);
-    mask-size: 100%;
-    mask-repeat: no-repeat;
-    width: 90%;
-    margin: 0 auto 0;
-    img {
+      margin-top: 1%;
       width: 100%;
-      object-fit: cover;
-      object-position: 0 -60px;
     }
   }
-  .name-wrapper {
-    margin-top: -50px;
-  }
-  .name {
-    font-size: 32px;
+  .image1 {
     text-align: center;
-    font-family: "Dancing Script", cursive;
+    background: transparent;
+    img {
+      height: 100%;
+      width: auto;
+      object-fit: cover;
+    }
   }
-  .date {
-    font-size: 32px;
-    font-family: "Libre Bodoni", serif;
-    text-align: center;
-    margin-top: 10px;
+  .date-name {
+    width: 100%;
+    padding: 4% 8%;
+    display: flex;
+    justify-content: space-between;
+    .name {
+      width: 66%;
+    }
+    .date {
+      width: 32%;
+    }
   }
 }
 #player {
