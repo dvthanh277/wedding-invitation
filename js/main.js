@@ -57,7 +57,9 @@
 // };
 
 $(document).ready(function () {
-  console.log("a");
+  const dayCountdown = "11/10/";
+  const dateCalendar = "11/10/2024";
+
   const audio = document.getElementById("backgroundAudio");
 
   (function () {
@@ -73,12 +75,11 @@ $(document).ready(function () {
       mm = String(today.getMonth() + 1).padStart(2, "0"),
       yyyy = today.getFullYear(),
       nextYear = yyyy,
-      dayMonth = "11/10/",
-      birthday = dayMonth + yyyy;
+      birthday = dayCountdown + yyyy;
 
     today = mm + "/" + dd + "/" + yyyy;
     if (today > birthday) {
-      birthday = dayMonth + nextYear;
+      birthday = dayCountdown + nextYear;
     }
     //end
 
@@ -110,4 +111,54 @@ $(document).ready(function () {
         //seconds
       }, 0);
   })();
+
+  function generateCalendar() {
+    const inputDate = new Date(dateCalendar);
+    const year = inputDate.getFullYear();
+    const month = inputDate.getMonth(); // Tháng (0 = Tháng 1, 11 = Tháng 12)
+    const activeDay = inputDate.getDate();
+    const dateNow = new Date().getDate();
+
+    // Lấy ngày đầu tiên và ngày cuối cùng của tháng
+    const firstDayOfMonth = new Date(year, month, 1);
+    const lastDayOfMonth = new Date(year, month + 1, 0);
+
+    // Tạo các nhãn ngày trong tuần
+    const daysOfWeek = ["CN", "T2", "T3", "T4", "T5", "T6", "T7"];
+    const calendar = document.getElementById("calendar");
+    calendar.innerHTML = "";
+
+    // Thêm các nhãn ngày vào lịch
+    daysOfWeek.forEach((day) => {
+      const dayElement = document.createElement("div");
+      dayElement.classList.add("day", "header");
+      dayElement.innerText = day;
+      calendar.appendChild(dayElement);
+    });
+
+    // Điền các ngày trống trước ngày đầu tiên của tháng
+    for (let i = 0; i < firstDayOfMonth.getDay(); i++) {
+      const emptyDay = document.createElement("div");
+      emptyDay.classList.add("day");
+      calendar.appendChild(emptyDay);
+    }
+
+    // Điền các ngày trong tháng
+    for (let day = 1; day <= lastDayOfMonth.getDate(); day++) {
+      const dayElement = document.createElement("div");
+      dayElement.classList.add("day");
+      dayElement.innerText = day;
+
+      // Nếu là ngày nhập vào, thêm class "active"
+      if (day === activeDay) {
+        dayElement.classList.add("active");
+      }
+      if (day === dateNow) {
+        dayElement.classList.add("date-now");
+      }
+
+      calendar.appendChild(dayElement);
+    }
+  }
+  generateCalendar();
 });

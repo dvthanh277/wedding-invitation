@@ -7,6 +7,9 @@ html {
   font-family: "Lexend", sans-serif;
   color: #000;
 }
+body {
+  background: url(../images/paper.png);
+}
 .main {
   display: flex;
   flex-direction: column;
@@ -81,4 +84,28 @@ section {
   position: absolute;
   opacity: 0;
   z-index: -9999;
+}
+.section3 {
+  .calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    text-align: center;
+  }
+  .day {
+    padding: 10px;
+    font-family: "Libre Bodoni", serif;
+  }
+  .date-now {
+    font-weight: bold;
+    color: #abab54;
+  }
+  .active {
+    // background-color: #4caf50;
+    background: url(../images/icon_heart.png) no-repeat;
+    background-size: 39px;
+    background-position-y: 3px;
+    color: #fff;
+    font-weight: bold;
+  }
 }
